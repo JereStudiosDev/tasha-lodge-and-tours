@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Photo Gallery & Experiences | Tasha Lodge & Tours Livingstone</title>
+    <meta name="description" content="Browse high-resolution photographs of Tasha Lodge & Tours in Livingstone, Zambia. Explore our executive rooms, swimming pool grounds, dining, and Victoria Falls safari tours.">
+    <meta property="og:title" content="Photo Gallery | Tasha Lodge & Tours Livingstone">
+    <meta property="og:description" content="Visual showcase of Tasha Lodge & Tours: sparkling private pool, executive comfort suites, and curated Livingstone wildlife excursions.">
+    <meta property="og:image" content="/images/hero_lodge.jpg">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="/style.css">
+    <script src="/main.js" defer></script>
+</head>
+<body>
+
+    <!-- Header Top Bar (Brand & Action CTAs - Navigation is exclusively via Bottom Dock) -->
+    <header>
+        <div class="container header-content">
+            <a href="/index.html" class="logo">
+                <svg class="logo-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21h18"></path>
+                    <path d="M5 21V7l8-4v18"></path>
+                    <path d="M19 21V11l-6-3"></path>
+                    <path d="M9 11v10"></path>
+                </svg>
+                Tasha Lodge & Tours
+            </a>
+
+            <div class="header-cta-group">
+                <button class="btn btn-outline" style="padding: 9px 18px; font-size: 0.88rem;" onclick="openConceptBookingModal()">
+                    Book Now
+                </button>
+                <button class="btn btn-whatsapp header-cta" style="padding: 9px 18px; font-size: 0.88rem;" onclick="openWhatsApp('Hi Tasha Lodge, I would like to book a stay.')">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-5.824 4.74-10.563 10.564-10.563 5.826 0 10.564 4.738 10.564 10.563 0 5.826-4.738 10.563-10.564 10.563z"/></svg>
+                    WhatsApp
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="reveal" style="padding-top: 130px; padding-bottom: 24px; text-align: center;">
+            <div class="container">
+                <h1>Lodge & Experience Gallery</h1>
+                <p class="subtitle" style="margin: 1rem auto 2rem;">
+                    Immerse yourself in life at Tasha Lodge. Click any photo to expand into our high-definition interactive lightbox.
+                </p>
+
+                <!-- Interactive Category Filter Tabs -->
+                <div class="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="rooms">Rooms & Suites</button>
+                    <button class="filter-btn" data-filter="grounds">Grounds & Pool</button>
+                    <button class="filter-btn" data-filter="dining">Dining</button>
+                    <button class="filter-btn" data-filter="tours">Tours & Falls</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section style="padding-top: 10px;" class="reveal">
+            <div class="container">
+                <div class="gallery-grid" id="main-gallery">
+
+                    <!-- Item 1: Pool (Grounds) -->
+                    <div class="gallery-item" data-category="grounds">
+                        <img src="/images/hero_lodge.jpg" alt="Lush tropical gardens and sparkling swimming pool" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Private Swimming Pool & Tropical Grounds</div>
+                    </div>
+
+                    <!-- Item 2: Executive Suite (Rooms) -->
+                    <div class="gallery-item" data-category="rooms">
+                        <img src="/images/room_executive.jpg" alt="Executive Suite plush king bed and warm decor" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Executive King Suite</div>
+                    </div>
+
+                    <!-- Item 3: Victoria Falls (Tours) -->
+                    <div class="gallery-item" data-category="tours">
+                        <img src="/images/tour_vic_falls.jpg" alt="Victoria Falls rainbow and roaring cascades" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Mosi-oa-Tunya · Victoria Falls Viewpoint</div>
+                    </div>
+
+                    <!-- Item 4: Twin Room (Rooms) -->
+                    <div class="gallery-item" data-category="rooms">
+                        <img src="/images/room_twin.jpg" alt="Deluxe Twin Room with bright natural light" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Deluxe Twin Room · Garden View</div>
+                    </div>
+
+                    <!-- Item 5: Zambezi Sunset (Tours) -->
+                    <div class="gallery-item" data-category="tours">
+                        <img src="/images/tour_zambezi.jpg" alt="Zambezi River golden hour sunset cruise" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Zambezi River Sunset Cruise</div>
+                    </div>
+
+                    <!-- Item 6: Family Suite (Rooms) -->
+                    <div class="gallery-item" data-category="rooms">
+                        <img src="/images/room_family.jpg" alt="Family suite with multi-bed configuration" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Family Adventure Suite</div>
+                    </div>
+
+                    <!-- Item 7: Mukuni Big 5 (Tours) -->
+                    <div class="gallery-item" data-category="tours">
+                        <img src="/images/tour_mukuni.jpg" alt="Guided cheetah wildlife interaction at Mukuni" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Mukuni Big 5 Wildlife Encounter</div>
+                    </div>
+
+                    <!-- Item 8: Devil's Pool (Tours) -->
+                    <div class="gallery-item" data-category="tours">
+                        <img src="/images/tour_devils_pool.jpg" alt="Devil's Pool on the precipice of Victoria Falls" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Livingstone Island · Devil's Pool Swim</div>
+                    </div>
+
+                    <!-- Item 9: Helicopter (Tours) -->
+                    <div class="gallery-item" data-category="tours">
+                        <img src="/images/tour_helicopter.jpg" alt="Aerial view of Batoka Gorge and Victoria Falls" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Flight of Angels · Scenic Helicopter Tour</div>
+                    </div>
+
+                    <!-- Item 10: Dining (Dining) -->
+                    <div class="gallery-item" data-category="dining">
+                        <img src="/images/hero_lodge.jpg" alt="Outdoor dining and breakfast poolside terrace" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Poolside Breakfast & Dining Veranda</div>
+                    </div>
+
+                    <!-- Item 11: Grounds & Garden (Grounds) -->
+                    <div class="gallery-item" data-category="grounds">
+                        <img src="/images/room_executive.jpg" alt="Peaceful courtyard and room entrance walkway" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Tranquil Garden Courtyard & Patio</div>
+                    </div>
+
+                    <!-- Item 12: Morning Breakfast & Drinks (Dining) -->
+                    <div class="gallery-item" data-category="dining">
+                        <img src="/images/room_twin.jpg" alt="Morning coffee and fresh breakfast service" loading="lazy" referrerpolicy="no-referrer">
+                        <div class="gallery-caption">Fresh Continental & Zambian Breakfast</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Bottom CTA -->
+        <section class="reveal" style="text-align: center; padding-top: 40px;">
+            <div class="container">
+                <div style="background: var(--card-bg); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px 20px; max-width: 600px; margin: 0 auto; box-shadow: var(--shadow-sm);">
+                    <h3 style="margin-bottom: 8px;">Experience It In Person</h3>
+                    <p style="margin-bottom: 20px;">We look forward to hosting you in Livingstone. Check room availability or inquire about guided safari excursions.</p>
+                    <div class="btn-group" style="justify-content: center;">
+                        <a href="/rooms.html" class="btn">View Room Rates</a>
+                        <button class="btn btn-whatsapp" onclick="openWhatsApp('Hi Tasha Lodge, I would like to book a stay.')">
+                            Chat on WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CRITICAL FEATURE: Interactive Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal" aria-hidden="true" role="dialog">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Close Lightbox">&times;</button>
+        <button id="lightbox-prev" class="lightbox-prev" aria-label="Previous Image">&#10094;</button>
+        <button id="lightbox-next" class="lightbox-next" aria-label="Next Image">&#10095;</button>
+        
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Enlarged view">
+            <div id="lightbox-caption" class="lightbox-caption-text"></div>
+        </div>
+    </div>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 12px;">
+                        <svg class="logo-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-3"></path><path d="M9 11v10"></path></svg>
+                        Tasha Lodge & Tours
+                    </div>
+                    <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px;">
+                        A peaceful sanctuary with executive rooms, a swimming pool, and curated Victoria Falls tours in Livingstone, Zambia.
+                    </p>
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">Plot 4424/200, Kalambo Street, Highlands, Livingstone, Zambia</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Navigation</h5>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/rooms.html">Accommodation</a></li>
+                        <li><a href="/tours.html">Livingstone Tours</a></li>
+                        <li><a href="/gallery.html">Photo Gallery</a></li>
+                        <li><a href="/contact.html">Contact & Payments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Popular Tours</h5>
+                    <ul class="footer-links">
+                        <li><a href="/tours.html">Victoria Falls Tour</a></li>
+                        <li><a href="/tours.html">Mukuni Big 5 Encounter</a></li>
+                        <li><a href="/tours.html">Zambezi Sunset Cruise</a></li>
+                        <li><a href="/tours.html">Devil's Pool Excursion</a></li>
+                        <li><a href="/tours.html">Helicopter Flight</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Direct Reservations</h5>
+                    <p style="font-size: 0.9rem; margin-bottom: 14px;">Instant confirmation and inquiries available via WhatsApp or direct phone call.</p>
+                    <button class="btn btn-whatsapp" style="width: 100%;" onclick="openWhatsApp('Hi Tasha Lodge, I would like to make an inquiry.')">
+                        Chat on WhatsApp
+                    </button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Tasha Lodge & Tours. All Rights Reserved. Livingstone, Zambia.</div>
+                <div>Regulated Tourism & Hospitality Provider · Highlands Enclave</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Global Bottom Navigation Dock (Exclusively replaces top navigation) -->
+    <nav class="bottom-nav">
+        <a href="/index.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Home
+        </a>
+        <a href="/about.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            About
+        </a>
+        <a href="/rooms.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+            Rooms
+        </a>
+        <a href="/tours.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            Tours
+        </a>
+        <a href="/gallery.html" class="nav-item active">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            Gallery
+        </a>
+        <a href="/contact.html" class="nav-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Contact
+        </a>
+        <button class="nav-cta" onclick="openConceptBookingModal()">
+            Book Now
+        </button>
+    </nav>
+
+    <!-- CRITICAL FEATURE: Concept Booking Modal with Select Payment Options (Airtel, MTN, Zamtel, Card) -->
+    <div id="concept-booking-modal" class="modal-overlay" role="dialog" aria-modal="true">
+        <div class="concept-modal-box">
+            <button class="modal-close" onclick="closeConceptBookingModal()" aria-label="Close modal">&times;</button>
+            
+            <div id="concept-form-container">
+                <span class="concept-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    Interactive Prototype · Select Payment Demo
+                </span>
+                
+                <h3 style="font-size: 1.35rem; color: var(--text-main); margin-bottom: 4px;">Book Now (Concept Demo)</h3>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px;">
+                    Simulate your reservation process with local mobile money and card options. No real funds will be charged.
+                </p>
+
+                <form onsubmit="submitConceptBooking(event)">
+                    <div class="concept-field-group">
+                        <label class="concept-label" for="concept-item-select">Select Room or Tour Experience</label>
+                        <select id="concept-item-select" class="concept-select">
+                            <optgroup label="Rooms & Accommodation">
+                                <option value="exec" data-price="85" selected>Executive Suite ($85 / night)</option>
+                                <option value="twin" data-price="75">Deluxe Twin Room ($75 / night)</option>
+                                <option value="family" data-price="110">Family Adventure Suite ($110 / night)</option>
+                                <option value="honeymoon" data-price="95">Honeymoon Garden Suite ($95 / night)</option>
+                                <option value="standard" data-price="65">Standard Twin Room ($65 / night)</option>
+                                <option value="chalet" data-price="130">Multi-Bed Group Chalet ($130 / night)</option>
+                            </optgroup>
+                            <optgroup label="Livingstone Tours & Activities">
+                                <option value="tour_falls" data-price="45">Victoria Falls Guided Tour ($45 / person)</option>
+                                <option value="tour_mukuni" data-price="60">Mukuni Big 5 Encounters ($60 / person)</option>
+                                <option value="tour_cruise" data-price="65">Zambezi Sunset Cruise ($65 / person)</option>
+                                <option value="tour_devils" data-price="125">Devil's Pool & Livingstone Island ($125 / person)</option>
+                                <option value="tour_heli" data-price="175">Flight of Angels Helicopter Flight ($175 / person)</option>
+                                <option value="tour_chobe" data-price="180">Chobe Full-Day Safari Botswana ($180 / person)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;" class="concept-field-group">
+                        <div>
+                            <label class="concept-label" for="concept-date-input">Check-in / Date</label>
+                            <input type="date" id="concept-date-input" class="concept-input" value="2026-10-10" required>
+                        </div>
+                        <div>
+                            <label class="concept-label" for="concept-nights-input">Nights / People</label>
+                            <input type="number" id="concept-nights-input" class="concept-input" value="1" min="1" max="30" required>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;" class="concept-field-group">
+                        <div>
+                            <label class="concept-label" for="concept-name-input">Full Name</label>
+                            <input type="text" id="concept-name-input" class="concept-input" placeholder="e.g. John Doe" required>
+                        </div>
+                        <div>
+                            <label class="concept-label" for="concept-phone-input">Contact Phone</label>
+                            <input type="tel" id="concept-phone-input" class="concept-input" placeholder="+260 97X XXX XXX" required>
+                        </div>
+                    </div>
+
+                    <div class="payment-selector-title">Select Payment Option</div>
+                    <div class="payment-options-grid">
+                        <div class="payment-option-card selected" data-method="airtel" onclick="selectPaymentOption('airtel')">
+                            <div class="payment-brand-row">
+                                <span class="payment-brand-badge badge-airtel">airtel</span>
+                                <span class="payment-brand-name">Airtel Money</span>
+                            </div>
+                            <span class="payment-brand-desc">Instant USSD PIN Prompt</span>
+                        </div>
+
+                        <div class="payment-option-card" data-method="mtn" onclick="selectPaymentOption('mtn')">
+                            <div class="payment-brand-row">
+                                <span class="payment-brand-badge badge-mtn">MTN</span>
+                                <span class="payment-brand-name">MTN MoMo</span>
+                            </div>
+                            <span class="payment-brand-desc">Direct Mobile Money</span>
+                        </div>
+
+                        <div class="payment-option-card" data-method="zamtel" onclick="selectPaymentOption('zamtel')">
+                            <div class="payment-brand-row">
+                                <span class="payment-brand-badge badge-zamtel">Z</span>
+                                <span class="payment-brand-name">Zamtel Kwacha</span>
+                            </div>
+                            <span class="payment-brand-desc">Local Mobile Wallet</span>
+                        </div>
+
+                        <div class="payment-option-card" data-method="card" onclick="selectPaymentOption('card')">
+                            <div class="payment-brand-row">
+                                <span class="payment-brand-badge badge-card">CARD</span>
+                                <span class="payment-brand-name">Debit / Credit</span>
+                            </div>
+                            <span class="payment-brand-desc">Visa · Mastercard · Amex</span>
+                        </div>
+                    </div>
+
+                    <div id="concept-mobile-panel" class="payment-detail-panel">
+                        <label id="concept-mobile-label" class="concept-label" for="concept-mobile-number">Airtel Money Phone Number</label>
+                        <input type="tel" id="concept-mobile-number" class="concept-input" placeholder="+260 97X XXX XXX">
+                        <p id="concept-mobile-prompt" style="font-size: 0.78rem; color: var(--text-muted); margin-top: 6px;">
+                            A simulated USSD PIN prompt will be sent to your phone upon clicking confirm.
+                        </p>
+                    </div>
+
+                    <div id="concept-card-panel" class="payment-detail-panel" style="display: none;">
+                        <div class="concept-field-group" style="margin-bottom: 10px;">
+                            <label class="concept-label" for="concept-card-name">Cardholder Name</label>
+                            <input type="text" id="concept-card-name" class="concept-input" placeholder="Name as printed on card">
+                        </div>
+                        <div class="concept-field-group" style="margin-bottom: 10px;">
+                            <label class="concept-label" for="concept-card-num">Card Number</label>
+                            <input type="text" id="concept-card-num" class="concept-input" placeholder="4000 1234 5678 9010" maxlength="19">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <div>
+                                <label class="concept-label" for="concept-card-exp">Expiry</label>
+                                <input type="text" id="concept-card-exp" class="concept-input" placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div>
+                                <label class="concept-label" for="concept-card-cvv">CVV</label>
+                                <input type="password" id="concept-card-cvv" class="concept-input" placeholder="•••" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="concept-summary-box">
+                        <div class="concept-summary-row">
+                            <span>Subtotal:</span>
+                            <span id="concept-subtotal-display" style="font-weight: 600; font-family: monospace;">$85 USD</span>
+                        </div>
+                        <div class="concept-summary-row">
+                            <span>Tourism Levy & Taxes:</span>
+                            <span style="color: #2D6A4F; font-weight: 600;">Included (0%)</span>
+                        </div>
+                        <div class="concept-summary-total">
+                            <span>Total Estimated:</span>
+                            <span id="concept-total-display" style="color: var(--primary);">$85 USD (~ZMW 2,337)</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <button type="submit" id="concept-submit-btn" class="btn" style="width: 100%; padding: 14px;">
+                            Simulate Payment & Reserve
+                        </button>
+                        <button type="button" class="btn btn-whatsapp" style="width: 100%;" onclick="openWhatsApp('Hi Tasha Lodge, I would like to book directly via WhatsApp.')">
+                            Book Real Reservation via WhatsApp
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Simulated Confirmation Screen -->
+            <div id="concept-success-screen" class="concept-success-screen">
+                <div class="concept-success-icon">✓</div>
+                <h3 style="font-size: 1.4rem; color: var(--text-main); margin-bottom: 6px;">Booking Simulation Received!</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">
+                    Mock Transaction ID: <strong style="font-family: monospace; color: var(--primary);">#TL-2026-DEMO</strong>
+                </p>
+
+                <div style="background: #F8F9FA; border: 1px solid var(--border); border-radius: var(--radius-md); padding: 18px; text-align: left; margin-bottom: 20px; font-size: 0.9rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: var(--text-muted);">Guest Name:</span>
+                        <strong id="success-summary-name" style="color: var(--text-main);">Guest</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: var(--text-muted);">Selected Reservation:</span>
+                        <strong id="success-summary-item" style="color: var(--text-main);">Executive Suite</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: var(--text-muted);">Dates:</span>
+                        <strong id="success-summary-dates" style="color: var(--text-main);">Selected Dates</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: var(--text-muted);">Payment Method:</span>
+                        <strong id="success-summary-method" style="color: var(--secondary);">Airtel Money</strong>
+                    </div>
+                </div>
+
+                <div style="background: #FFF9F5; border: 1px solid rgba(217, 107, 39, 0.25); border-radius: var(--radius-sm); padding: 12px 14px; font-size: 0.84rem; color: var(--text-muted); line-height: 1.45; margin-bottom: 20px; text-align: left;">
+                    <strong style="color: var(--primary);">Prototype Notice:</strong> This was a proof-of-concept demonstration. To confirm an actual stay or tour at Tasha Lodge & Tours in Livingstone, send these details directly to our reservations desk on WhatsApp.
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a id="success-whatsapp-btn" href="#" target="_blank" class="btn btn-whatsapp" style="width: 100%;">
+                        Send Details to Official WhatsApp
+                    </a>
+                    <button type="button" class="btn btn-outline" style="width: 100%;" onclick="closeConceptBookingModal()">
+                        Close Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

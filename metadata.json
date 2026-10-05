@@ -1,0 +1,6 @@
+{
+  "name": "Tasha Lodge & Tours",
+  "description": "Experience authentic Zambian hospitality in Livingstone near Victoria Falls. Executive accommodation, curated safari tours, private pool, and direct booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
